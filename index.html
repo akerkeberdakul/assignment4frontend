@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forms and Validation | Bloom &amp; Petal Club</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar site-navbar"><div class="container"><a class="navbar-brand" href="#top">🌸 Bloom &amp; Petal Club</a><ul class="navbar-nav flex-row ms-auto"><li class="nav-item"><a class="nav-link" href="#part1">Part 1</a></li><li class="nav-item"><a class="nav-link" href="#part2">Part 2</a></li><li class="nav-item"><a class="nav-link" href="#part3">Part 3</a></li></ul></div></nav>
+<header class="section-block" id="top"><div class="container"><h1>Bloom &amp; Petal Club</h1><p>Assignment #4 · Forms and Validation</p></div></header>
+<main class="container section-block">
+<div id="part1">
+<section class="sidebar form-panel plain">
+  <span class="tag">TASK 0</span>
+  <h2>Simple Contact Form</h2>
+  <form action="#" method="post">
+    <label for="name0">Name</label>
+    <input type="text" id="name0" name="name">
+    <label for="email0">Email</label>
+    <input type="email" id="email0" name="email">
+    <label for="msg0">Message</label>
+    <textarea id="msg0" name="message" rows="4"></textarea>
+    <button type="submit">Send a note</button>
+  </form>
+</section>
+
+<section class="sidebar form-panel plain">
+  <span class="tag">TASK 1</span>
+  <h2>Form with HTML5 Validation</h2>
+  <p>Try submitting empty, with a bad email, or with a short message — the browser stops you.</p>
+  <form action="#" method="post">
+    <label for="name1">Your name (2–30 characters)</label>
+    <input type="text" id="name1" name="name" required minlength="2" maxlength="30" placeholder="e.g. Rose Garden">
+    <label for="email1">Email</label>
+    <input type="email" id="email1" name="email" required placeholder="you@bloom.com">
+    <label for="num1">Bouquets to order (1–99)</label>
+    <input type="number" id="num1" name="bouquets" min="1" max="99" required>
+    <label for="msg1">Message (10–200 characters)</label>
+    <textarea id="msg1" name="message" rows="4" required minlength="10" maxlength="200" placeholder="Tell us about your favourite blooms..."></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+</div>
+<div id="part2">
+<section class="sidebar form-panel"><span class="tag">TASK 2</span><h2>Bootstrap Form Styling</h2>
+<form action="#" onsubmit="return false">
+<div class="row g-3">
+  <div class="col-md-6">
+    <label for="sname" class="form-label">Name</label>
+    <input type="text" class="form-control" id="sname" placeholder="Lily Rose">
+    <div class="form-text">Your full name.</div>
+    
+    
+  </div>
+  <div class="col-md-6">
+    <label for="semail" class="form-label">Email</label>
+    <input type="email" class="form-control" id="semail" placeholder="you@bloom.com">
+    <div class="form-text">We will never share your email.</div>
+    
+    
+  </div>
+  <div class="col-md-4">
+    <label for="sflower" class="form-label">Favourite flower</label>
+    <select class="form-select" id="sflower">
+      <option value="">Choose...</option><option>Rose</option><option>Tulip</option><option>Peony</option><option>Lily</option><option>Sunflower</option>
+    </select>
+    
+    
+  </div>
+  <div class="col-md-8">
+    <label for="smsg" class="form-label">Message</label>
+    <textarea class="form-control" id="smsg" rows="3" placeholder="Write your message..."></textarea>
+    <div class="form-text">At least 10 characters.</div>
+    
+    
+  </div>
+  <div class="col-12 d-flex gap-2">
+    <button class="btn btn-floral px-4" type="submit">Send</button>
+    <button class="btn btn-sage" type="reset">Reset</button>
+  </div>
+</div></form></section>
+<section class="sidebar form-panel"><span class="tag">TASK 3</span><h2>Bootstrap Validation Styles</h2>
+<p>Uses <code>is-valid</code> / <code>is-invalid</code> with feedback messages. Type in the fields or press Send.</p>
+<form class="needs-validation" novalidate action="#">
+<div class="row g-3">
+  <div class="col-md-6">
+    <label for="vname" class="form-label">Name</label>
+    <input type="text" class="form-control" id="vname" placeholder="Lily Rose" required minlength="2">
+    <div class="form-text">Your full name.</div>
+    <div class="invalid-feedback">Name is required (min 2 characters).</div>
+    <div class="valid-feedback">Looks good!</div>
+  </div>
+  <div class="col-md-6">
+    <label for="vemail" class="form-label">Email</label>
+    <input type="email" class="form-control" id="vemail" placeholder="you@bloom.com" required>
+    <div class="form-text">We will never share your email.</div>
+    <div class="invalid-feedback">Email is required and must be valid.</div>
+    <div class="valid-feedback">Looks good!</div>
+  </div>
+  <div class="col-md-4">
+    <label for="vflower" class="form-label">Favourite flower</label>
+    <select class="form-select" id="vflower" required>
+      <option value="">Choose...</option><option>Rose</option><option>Tulip</option><option>Peony</option><option>Lily</option><option>Sunflower</option>
+    </select>
+    <div class="invalid-feedback">Please pick a flower.</div>
+    <div class="valid-feedback">Beautiful choice!</div>
+  </div>
+  <div class="col-md-8">
+    <label for="vmsg" class="form-label">Message</label>
+    <textarea class="form-control" id="vmsg" rows="3" placeholder="Write your message..." required minlength="10"></textarea>
+    <div class="form-text">At least 10 characters.</div>
+    <div class="invalid-feedback">Message is required (min 10 characters).</div>
+    <div class="valid-feedback">Looks good!</div>
+  </div>
+  <div class="col-12 d-flex gap-2">
+    <button class="btn btn-floral px-4" type="submit">Send</button>
+    <button class="btn btn-sage" type="reset">Reset</button>
+  </div>
+</div></form><div class="result"></div></section>
+</div>
+<div id="part3">
+<section class="sidebar form-panel">
+  <span class="tag">TASK 4</span>
+  <h2>Become a Member</h2>
+  <form class="needs-validation" novalidate action="#">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label for="first" class="form-label">First name</label>
+        <input type="text" class="form-control" id="first" required minlength="2" pattern="[A-Za-z\u00C0-\u017F' -]+" placeholder="Daisy">
+        <div class="invalid-feedback">First name is required (letters only, min 2).</div>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-md-6">
+        <label for="last" class="form-label">Last name</label>
+        <input type="text" class="form-control" id="last" required minlength="2" pattern="[A-Za-z\u00C0-\u017F' -]+" placeholder="Bloom">
+        <div class="invalid-feedback">Last name is required (letters only, min 2).</div>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-12">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" required placeholder="you@bloom.com">
+        <div class="invalid-feedback">Please enter a valid email.</div>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-md-6">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" required minlength="8" pattern="(?=.*\d)(?=.*[A-Za-z]).{8,}">
+        <div class="form-text">Min 8 characters, with a letter and a number.</div>
+        <div class="invalid-feedback">Password must be 8+ characters with a letter and a number.</div>
+        <div class="valid-feedback">Strong enough!</div>
+      </div>
+      <div class="col-md-6">
+        <label for="confirm" class="form-label">Confirm password</label>
+        <input type="password" class="form-control" id="confirm" required>
+        <div class="invalid-feedback">Please confirm your password.</div>
+        <div class="valid-feedback">Passwords match!</div>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label d-block">Gender</label>
+        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="gender" id="g1" value="male" required><label class="form-check-label" for="g1">Male</label></div>
+        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="gender" id="g2" value="female" required><label class="form-check-label" for="g2">Female</label></div>
+        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="gender" id="g3" value="other" required><label class="form-check-label" for="g3">Other</label>
+          <div class="invalid-feedback">Please select a gender.</div></div>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label d-block">Hobbies</label>
+        <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="h1" value="gardening"><label class="form-check-label" for="h1">Gardening</label></div>
+        <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="h2" value="arranging"><label class="form-check-label" for="h2">Flower arranging</label></div>
+        <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="h3" value="pressing"><label class="form-check-label" for="h3">Pressing flowers</label></div>
+        <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="h4" value="photo"><label class="form-check-label" for="h4">Photography</label></div>
+      </div>
+      <div class="col-md-6">
+        <label for="country" class="form-label">Country</label>
+        <select class="form-select" id="country" required>
+          <option value="">Choose...</option><option>Kazakhstan</option><option>Netherlands</option><option>France</option><option>United Kingdom</option><option>Japan</option><option>Italy</option><option>Australia</option><option>Brazil</option>
+        </select>
+        <div class="invalid-feedback">Please select a country.</div>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="terms" required>
+          <label class="form-check-label" for="terms">I agree to the garden club rules</label>
+          <div class="invalid-feedback">You must agree before submitting.</div>
+        </div>
+      </div>
+      <div class="col-12 d-flex gap-2">
+        <button class="btn btn-floral px-4" type="submit">Register</button>
+        <button class="btn btn-sage" type="reset">Reset</button>
+      </div>
+    </div>
+  </form>
+  <div class="result"></div>
+</section>
+</div>
+</main>
+<footer class="site-footer"><div class="container"><p>Assignment #4 · Forms and Validation · Bloom &amp; Petal Club 🌷</p></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.querySelectorAll('form.needs-validation').forEach(form => {
+  const pw = form.querySelector('#password'), cf = form.querySelector('#confirm');
+  const result = form.parentElement.querySelector('.result');
+
+  const matchCheck = () => {
+    if (!pw || !cf) return;
+    const bad = cf.value && cf.value !== pw.value;
+    cf.setCustomValidity(bad ? 'mismatch' : '');
+    cf.parentElement.querySelector('.invalid-feedback').textContent =
+      bad ? 'Passwords do not match.' : 'Please confirm your password.';
+  };
+  const mark = el => {
+    if (el.type === 'radio' || el.type === 'checkbox') return;
+    const ok = el.checkValidity();
+    el.classList.toggle('is-valid', ok);
+    el.classList.toggle('is-invalid', !ok);
+  };
+  form.querySelectorAll('input,select,textarea').forEach(el => {
+    el.addEventListener('input', () => { matchCheck(); mark(el); if (el === pw && cf.value) mark(cf); });
+    el.addEventListener('blur', () => { matchCheck(); mark(el); });
+  });
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    matchCheck();
+    form.querySelectorAll('input,select,textarea').forEach(mark);
+    form.classList.add('was-validated');
+    if (form.checkValidity()) {
+      result.innerHTML = '<div class="alert alert-success mt-3">🌸 Lovely! Your form was submitted successfully.</div>';
+    } else {
+      result.innerHTML = '<div class="alert alert-danger mt-3">🥀 Almost in bloom — please fix the highlighted fields.</div>';
+    }
+  });
+  form.addEventListener('reset', () => {
+    form.classList.remove('was-validated');
+    form.querySelectorAll('.is-valid,.is-invalid').forEach(el => el.classList.remove('is-valid', 'is-invalid'));
+    if (cf) cf.setCustomValidity('');
+    result.innerHTML = '';
+  });
+});
+</script>
+</body>
+</html>

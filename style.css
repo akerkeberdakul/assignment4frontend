@@ -1,0 +1,147 @@
+body {
+  font-size: 14px;
+  line-height: 1.6;
+  background: #f4F3F1;
+  color: #434d20;
+}
+ 
+h1 { 
+    font-size: 28px; 
+    font-family:Luminari, fantasy;
+}
+h2 { 
+    font-size: 22px;
+    font-family:Luminari, fantasy; 
+}
+p {
+    font-family: Luminari, fantasy;
+}
+.site-navbar { 
+    background: #e9839D;
+    font-family: Luminari, fantasy; 
+}
+
+.nav-link { 
+    background: #9FA881;
+    color:#F4F3F1;
+    margin: 0 8px;
+}
+ 
+.section-block { padding-top: 16px; padding-bottom: 16px; }
+
+.sidebar {
+  padding: 16px;
+  background: #F1CFE1;
+  border-radius: 8px;
+}
+ 
+.site-footer {
+  margin-top: 16px;
+  padding: 12px 0;
+  background: #e9839D;
+  color: #ffffff;
+  text-align: center;
+}
+.site-footer p { 
+    margin: 0; 
+}
+
+.navbar-brand { 
+    font-family: Luminari, fantasy; 
+    color: #fff; 
+    font-size: 22px; 
+}
+.navbar-brand:hover { 
+    color: #F4F3F1; 
+}
+.form-panel { 
+    margin-bottom: 24px; 
+}
+.tag { 
+    display: inline-block; 
+    background: #9FA881; 
+    color: #F4F3F1; 
+    font-family: Luminari, fantasy; 
+    padding: 2px 12px; 
+    border-radius: 12px; 
+    margin-bottom: 8px; 
+}
+.btn-floral { 
+    background: #e9839D; 
+    border: 0; 
+    color: #fff; 
+    font-family: Luminari, fantasy; 
+}
+.btn-floral:hover { 
+    background: #d96a89; 
+    color: #fff; 
+}
+.btn-sage { 
+    background: #9FA881; 
+    border: 0; 
+    color: #F4F3F1; 
+    font-family: Luminari, fantasy; 
+}
+.btn-sage:hover { 
+    background: #8a946c; 
+    color: #fff; 
+}
+.form-label, .form-check-label { 
+    font-weight: 600; 
+}
+.form-control, .form-select { 
+    background: #fff; 
+    border-color: #9FA881; 
+    color: #434d20; 
+}
+.form-control:focus, .form-select:focus { 
+    border-color: #e9839D; 
+    box-shadow: 0 0 0 .2rem rgba(233,131,157,.25); 
+}
+.form-check-input:checked { 
+    background-color: #e9839D; 
+    border-color: #e9839D; 
+}
+.form-text { 
+    color: #6b7340; 
+}
+.valid-feedback { 
+    color: #6b7a3a; 
+}
+.form-control.is-valid, .form-select.is-valid, .was-validated .form-control:valid, .was-validated .form-select:valid { 
+    border-color: #9FA881; 
+}
+.invalid-feedback { 
+    color: #c2456b; 
+}
+.form-control.is-invalid, .form-select.is-invalid, .was-validated .form-control:invalid, .was-validated .form-select:invalid { 
+    border-color: #c2456b; 
+}
+
+.plain label { 
+    display: block; 
+    margin: 12px 0 4px; 
+    font-weight: 600; 
+}
+.plain input, .plain textarea { 
+    width: 100%; 
+    padding: 8px; 
+    background: #fff; 
+    color: #434d20; 
+    border: 1px solid #9FA881; 
+    border-radius: 6px; 
+    font-family: inherit; 
+}
+.plain button { 
+    margin-top: 16px; 
+    padding: 8px 24px; 
+    background: #e9839D; 
+    color: #fff; 
+    border: 0; 
+    border-radius: 6px; 
+    font-family: Luminari, fantasy; 
+    cursor: pointer; 
+}
+.plain button:hover { 
+    background: #d96a89; 
+}
